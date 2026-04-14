@@ -1,0 +1,19 @@
+import random
+
+print("=== Gerador de Hábitos Saudáveis ===")
+
+habitos = [
+    "Beber 2 litros de água 💧",
+    "Caminhar por 20 minutos 🚶",
+    "Ficar 1 hora sem celular 📵",
+    "Dormir mais cedo hoje 😴",
+    "Alongar o corpo por 10 minutos 🧘",
+    "Evitar redes sociais por um tempo 📱",
+    "Ler um livro por 15 minutos 📚"
+]
+
+# Escolhe um hábito aleatório
+habitodoDia = random.choice(habitos)
+
+print("Seu hábito de hoje é:")
+print(habitodoDia)
