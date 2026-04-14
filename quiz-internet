@@ -1,0 +1,17 @@
+# saúde digital
+
+print("=== Monitor de Uso de Tela ===")
+
+# Entrada de Informações
+horas = float(input("Quantas horas você passa por dia no celular/computador? "))
+
+# Análise
+if horas <= 2:
+    print("Ótimo! Seu uso está equilibrado 👍")
+elif horas <= 5:
+    print("Uso moderado. Tente fazer pausas durante o dia ⏸️")
+else:
+    print("Atenção ao uso de tela! Considere reduzir e descansar mais ⚠️")
+
+# Dica final
+print("Dica: faça pausas a cada 1 hora para descansar a mente")
