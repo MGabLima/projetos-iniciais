@@ -1,0 +1,45 @@
+from datetime import datetime, timedelta
+
+def calcular_ig(dum_str):
+    try:
+        dum = datetime.strptime(dum_str, "%d/%m/%Y")
+        hoje = datetime.today()
+
+        if dum > hoje:
+            return "Erro: a DUM não pode ser no futuro."
+
+        dias_totais = (hoje - dum).days
+
+        semanas = dias_totais // 7
+        dias = dias_totais % 7
+
+        # cálculo da DPP
+        dpp = dum + timedelta(days=280)
+
+        # cálculo do trimestre
+        if semanas < 13:
+            trimestre = "1º trimestre"
+        elif semanas < 27:
+            trimestre = "2º trimestre"
+        else:
+            trimestre = "3º trimestre"
+
+        return semanas, dias, dpp.strftime("%d/%m/%Y"), trimestre
+
+    except ValueError:
+        return "Erro: formato inválido. Use dd/mm/aaaa."
+
+
+# entrada
+dum_input = input("Digite a DUM (dd/mm/aaaa): ")
+
+resultado = calcular_ig(dum_input)
+
+# saída
+if isinstance(resultado, tuple):
+    semanas, dias, dpp, trimestre = resultado
+    print(f"\nIdade gestacional: {semanas} semanas e {dias} dias")
+    print(f"Trimestre: {trimestre}")
+    print(f"Data provável do parto (DPP): {dpp}")
+else:
+    print(resultado)
