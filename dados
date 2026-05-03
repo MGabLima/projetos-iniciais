@@ -1,0 +1,44 @@
+# 📊 Projeto: Manipulação e Análise de Dados
+
+## 🎯 Objetivo
+
+Realizar manipulação, análise e interpretação de dados utilizando SQL, Excel e Google Sheets.
+
+## 🛠️ Ferramentas utilizadas
+
+* SQL
+* Excel
+* Google Sheets
+
+## 📁 Atividades realizadas
+
+* Consultas SQL para extração e manipulação de dados
+* Organização e limpeza de dados em planilhas
+* Análise de informações para identificação de padrões
+* Aplicação de lógica de dados para interpretação de resultados
+
+## 📈 Resultados
+
+* Estruturação de dados para análise
+* Identificação de insights básicos a partir dos dados
+* Desenvolvimento de raciocínio analítico
+
+## 💡 Observação
+
+Projeto desenvolvido para prática de análise de dados e aprimoramento de habilidades técnicas.
+
+
+
+  SELECT * FROM vendas;
+
+SELECT produto, SUM(receita) 
+FROM vendas
+GROUP BY produto;
+
+SELECT regiao, AVG(receita)
+FROM vendas
+GROUP BY regiao;
+
+
+
+  
